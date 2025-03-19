@@ -17,6 +17,10 @@ public class Animal {
         this.numPatas = numPatas;
     }
 
+    public Animal(){
+        System.out.println("Hola");
+    }
+
 
     public int getNumPatas() {
         return numPatas;
