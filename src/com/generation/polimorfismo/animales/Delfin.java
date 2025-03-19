@@ -6,6 +6,8 @@ public class Delfin extends Animal{
         super(name, color, tipoAlimento, edad, numPatas);
     }
 
+
+
     @Override
     public void hacerRuido(){
         System.out.println("Silba y chasquea en delfinezco");

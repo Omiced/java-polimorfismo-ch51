@@ -1,5 +1,7 @@
 package com.generation.polimorfismo.animales;
 
+import java.util.ArrayList;
+
 public class Animal {
     protected String name;
     protected String color;
@@ -14,6 +16,7 @@ public class Animal {
         this.edad = edad;
         this.numPatas = numPatas;
     }
+
 
     public int getNumPatas() {
         return numPatas;
@@ -67,5 +70,40 @@ public class Animal {
    public void hacerRuido(){
 
         System.out.println("Hacer ruidos de animal generico");
+    }
+
+    /*
+    * La sobrecarga de metodos es otro tipo de polimorfismo
+    * donde se pueden tener metodos con el mismo nombre siempre y cuando cumplan lo siguiente:
+    *  a. Tener un tipo de retorno diferente (ejemplo si suma retorna int, suma debe retornar double)
+    *  b. Puede tener el mismo tipo de retorno pero diferente numero de parametros
+    *  c. Donde pueden tener diferente tipo de retorno y diferente numero de parametros
+    * */
+    //metodo base
+    public int suma(int a, int b){
+        return a + b;
+    }
+
+// mismo nombre diferente numero de parametros
+    public int suma(int a, int b, int c){
+        return a + b + c;
+    }
+
+    //mismo nombre diferente tipo de retorno
+    public double suma(double a, double b){
+        return a + b;
+    }
+
+    //mismo nombre diferente tipo de retorno y numero de parametros
+    public double suma(double a, double b, double c){
+        return a + b + c;
+    }
+
+    public ArrayList<Integer> suma(ArrayList<Integer>numeros){
+        ArrayList<Integer> sumados =  new ArrayList<>();
+        for(Integer numero: numeros){
+            sumados.add(numero + 2);
+        }
+        return sumados;
     }
 }
